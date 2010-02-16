@@ -1,0 +1,5 @@
+ru-RU:
+  exporter:
+    name: Экспортер
+    pricelist: Прайслист
+    csv: Excel

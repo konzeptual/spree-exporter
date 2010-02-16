@@ -1,0 +1,5 @@
+en-US:
+  exporter:
+    name: Exporter
+    pricelist: Pricelist
+    csv: Excel

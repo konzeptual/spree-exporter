@@ -1,5 +1,14 @@
-class ExportProductsHooks < Spree::ThemeSupport::HookListener
+class ExporterHooks < Spree::ThemeSupport::HookListener
 
+  # insert_after :admin_product_sub_tabs do
+  #   %(<%= tab(:exporter, :label => 'exporter.name') %>)
+  # end
+
+  insert_after :admin_products_index_search_buttons do
+    %(<%= link_to "#{I18n.t('exporter.pricelist')} (#{I18n.t('exporter.csv')})", pricelist_path(:format => :csv) %>)
+  end
+
+  # admin_products_index_search_buttons, 'shared/links_to_pricelist'
   #
   # In this file you can modify the content of the hooks available in the default templates
   # and avoid overriding a template in many situations. Multiple extensions can modify the
