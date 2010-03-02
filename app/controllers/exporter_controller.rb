@@ -2,7 +2,7 @@ class ExporterController < Spree::BaseController
   helper ProductsHelper
 
   def pricelist
-    @products = Product.all
+    @products = Product.active
     render :csv => @products
   end
 
