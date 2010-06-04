@@ -3,7 +3,14 @@ class ExporterController < Spree::BaseController
 
   def pricelist
     @products = Product.active
-    render :csv => @products
+    respond_to do |format|
+      format.csv {
+        render :csv => @products
+      }
+      format.html {
+        render :layout => false
+      }
+    end
   end
 
 end
